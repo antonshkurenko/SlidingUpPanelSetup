@@ -1,0 +1,16 @@
+<resources>
+  <string name="app_name">SlidingUpPanelSetup</string>
+
+  <array name="dummy_strings">
+    <item>First</item>
+    <item>Second</item>
+    <item>Third</item>
+    <item>Fourth</item>
+    <item>Fifth</item>
+    <item>Sixth</item>
+    <item>Seventh</item>
+    <item>Eighth</item>
+    <item>Ninth</item>
+    <item>Tenth</item>
+  </array>
+</resources>
