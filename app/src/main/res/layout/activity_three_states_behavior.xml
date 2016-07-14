@@ -1,0 +1,107 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="io.github.tonyshkurenko.slidinguppanelsetup.ThreeStatesBehaviorActivity"
+    >
+
+  <FrameLayout
+      android:id="@+id/dummy_frame_layout_replacing_map"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@android:color/darker_gray"
+      android:fitsSystemWindows="true"
+      />
+  <!--</FrameLayout>-->
+  <!--<fragment-->
+  <!--android:layout_width="match_parent"-->
+  <!--android:layout_height="match_parent"-->
+  <!--android:id="@+id/support_map"-->
+  <!--android:name="com.google.android.gms.maps.SupportMapFragment"/>-->
+
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/appbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/AppTheme.AppBarOverlay"
+      app:layout_behavior=
+          "io.github.tonyshkurenko.slidinguppanelsetup.behaviors.FirstAppBarLayoutBehavior"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.design.widget.AppBarLayout
+      android:id="@+id/expanded_appbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:tag="modal-appbar"
+      android:theme="@style/AppTheme.AppBarOverlay"
+      app:layout_behavior=
+          "io.github.tonyshkurenko.slidinguppanelsetup.behaviors.SecondAppBarLayoutBehavior"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/expanded_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="@string/key_binding_default_toolbar_name"
+        />
+
+  </android.support.design.widget.AppBarLayout>
+
+
+  <ImageView
+      android:id="@+id/bottom_sheet_backdrop2"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:contentDescription="@null"
+      android:scaleType="centerCrop"
+      android:src="@drawable/picture_cheese"
+      app:layout_behavior=
+          "io.github.tonyshkurenko.slidinguppanelsetup.behaviors.BackdropBottomSheetBehavior"
+      />
+
+  <android.support.v4.widget.NestedScrollView
+      android:id="@+id/bottom_sheet"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:anchorPoint="200dp"
+      app:behavior_peekHeight="80dp"
+      app:layout_behavior=
+          "io.github.tonyshkurenko.slidinguppanelsetup.behaviors.BottomSheetBehaviorGoogleMapsLike"
+      >
+
+    <include
+        layout="@layout/layout_bottom_sheet_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+  </android.support.v4.widget.NestedScrollView>
+
+  <android.support.design.widget.FloatingActionButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/fab_margin"
+      android:clickable="true"
+      android:src="@android:drawable/ic_media_play"
+      app:layout_anchor="@id/bottom_sheet"
+      app:layout_anchorGravity="top|right|end"
+      app:layout_behavior=
+          "io.github.tonyshkurenko.slidinguppanelsetup.behaviors.ScrollAwareFabBehavior"
+      />
+</android.support.design.widget.CoordinatorLayout>

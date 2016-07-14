@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        sothree:theme="@style/ActionBar"
+        sothree:theme="@style/AppTheme.ActionBar"
         />
 
     <ImageView

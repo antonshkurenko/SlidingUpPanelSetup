@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
       new Demo("Sliding up panel library", SlidingUpPanelLibraryActivity.class),
       new Demo("Bottom sheet behavior", BottomSheetBehaviorActivity.class),
       new Demo("Bottom sheet dialog fragment", BottomSheetDialogFragmentActivity.class), // nice
-      new Demo("Bottom sheet dialog", BottomSheetDialogActivity.class)
+      new Demo("Bottom sheet dialog", BottomSheetDialogActivity.class),
+      new Demo("Three state behavior", ThreeStatesBehaviorActivity.class)
   };
 
   @Override protected void onCreate(Bundle savedInstanceState) {
