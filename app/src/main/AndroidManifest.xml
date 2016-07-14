@@ -15,6 +15,14 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity android:name=".SlidingUpPanelLibraryActivity">
+    </activity>
+    <activity android:name=".BottomSheetBehaviorActivity">
+    </activity>
+    <activity android:name=".BottomSheetDialogFragmentActivity">
+    </activity>
+    <activity android:name=".BottomSheetDialogActivity">
+    </activity>
   </application>
 
 </manifest>
